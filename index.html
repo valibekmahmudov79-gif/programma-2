@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Fat Loss Program</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f0f14;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-bottom: 15px;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1c1c2e, #0f0f14);
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #ff4d6d, #ff9e00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            opacity: .8;
+            margin-top: 8px;
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 40px;
+            background: linear-gradient(90deg, #ff4d6d, #ff9e00);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #181824;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 6px 0;
+            opacity: .9;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            background: #222;
+            color: #fff;
+        }
+
+        .progress-bar {
+            height: 14px;
+            background: #222;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #ff4d6d, #ff9e00);
+            transition: .5s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #14141c;
+            opacity: .6;
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal iframe {
+            width: 90%;
+            max-width: 800px;
+            height: 450px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .modal iframe {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1>Premium Fat Loss Program</h1>
+        <p>33 yosh • 95 kg</p>
+        <p>Maqsad: −5–7 kg vazn tashlash</p>
+        <button class="btn" onclick="document.getElementById('train').scrollIntoView({behavior:'smooth'})">
+            Dasturga o'tish
+        </button>
+    </div>
+
+    <section id="train">
+        <h2>🏋 Mashg'ulot Rejasi</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e">
+                <h3>Full Body</h3>
+                <ul>
+                    <li>Squat 4×10</li>
+                    <li>Bench Press 4×8-10</li>
+                    <li>Lat Pulldown 4×10</li>
+                    <li>Kardio 20 daqiqa</li>
+                </ul>
+                <button class="btn" onclick="openVideo('https://www.youtube.com/embed/aclHkVaku9U')">Texnika</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48">
+                <h3>Back + Legs</h3>
+                <ul>
+                    <li>Deadlift 4×6-8</li>
+                    <li>Barbell Row 4×10</li>
+                    <li>Leg Press 3×12</li>
+                    <li>Kardio 20 daqiqa</li>
+                </ul>
+                <button class="btn" onclick="openVideo('https://www.youtube.com/embed/op9kVnSso6Q')">Texnika</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>🥗 Protein Manbalari (Aniq ovqatlar)</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://sc04.alicdn.com/kf/Ad10283bfd66941be896d291462924868m/277770902/Ad10283bfd66941be896d291462924868m.jpeg"
+                    alt="">
+                <h3>Tovuq go'shti (150g)</h3>
+                <p>Protein: 35g</p>
+                <p>Kaloriya: ~250 kkal</p>
+            </div>
+
+            <div class="card">
+                <img src="https://frankfurt.apollo.olxcdn.com/v1/files/s00tsjiq7ke61-UZ/image;s=1200x660" alt="">
+                <h3>Tuxum (3 dona)</h3>
+                <p>Protein: 18g</p>
+                <p>Kaloriya: ~210 kkal</p>
+            </div>
+
+            <div class="card">
+                <img src="https://i.ytimg.com/vi/vcE4h_MdlbE/maxresdefault.jpg" alt="">
+                <h3>Baliq (150g)</h3>
+                <p>Protein: 30g</p>
+                <p>Omega-3 manbai</p>
+            </div>
+
+            <div class="card">
+                <img src="https://dostavo4ka.uz/upload-file/2021/05/05/2679/2da3bb22-90bd-421b-8d14-cbf14bedfc69.jpg" alt="">
+                <h3>Tvorog (200g)</h3>
+                <p>Protein: 28g</p>
+                <p>Yaxshi kechki ovqat</p>
+            </div>
+
+            <div class="card">
+                <img src="https://pics.walgreens.com/prodimg/677985/900.jpg" alt="">
+                <h3>Protein Shake</h3>
+                <p>1 scoop = 24–25g protein</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
+                <h3>Sabzavot + Guruch</h3>
+                <p>Energiya + vitaminlar</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>📊 Progress Kuzatuv</h2>
+
+        <div class="card">
+            <input type="number" id="start" placeholder="Boshlang'ich vazn">
+            <input type="number" id="current" placeholder="Hozirgi vazn">
+            <button class="btn" onclick="calc()">Hisoblash</button>
+            <h3 id="result"></h3>
+
+            <div class="progress-bar">
+                <div class="progress" id="bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Premium Online Coaching
+    </footer>
+
+    <div class="modal" id="modal">
+        <span class="close" onclick="closeVideo()">✖</span>
+        <iframe id="frame" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function calc() {
+            const start = parseFloat(document.getElementById('start').value);
+            const current = parseFloat(document.getElementById('current').value);
+            if (!start || !current) return;
+            const lost = start - current;
+            document.getElementById('result').innerText = "Yo'qotilgan vazn: " + lost.toFixed(1) + " kg";
+            let percent = (lost / 7) * 100;
+            if (percent < 0) percent = 0;
+            if (percent > 100) percent = 100;
+            document.getElementById('bar').style.width = percent + "%";
+        }
+        function openVideo(url) {
+            document.getElementById('modal').style.display = 'flex';
+            document.getElementById('frame').src = url;
+        }
+        function closeVideo() {
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('frame').src = '';
+        }
+    </script>
+
+</body>
+
+</html>
